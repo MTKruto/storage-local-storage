@@ -46,7 +46,7 @@ export class StorageLocalStorage extends Storage implements Storage {
     filter: GetManyFilter,
     params?: { limit?: number; reverse?: boolean },
   ) {
-    let entries = Object.entries(localStorage).sort(([a], [b]) =>
+    let entries = Object.entries(this.#localStorage).sort(([a], [b]) =>
       a.localeCompare(b)
     );
     if (params?.reverse) {

@@ -14,7 +14,7 @@ export class StorageLocalStorage extends Storage implements Storage {
     }
     super();
     this.#prefix = prefix;
-    this.#localStorage = localStorage ?? new LocalStorage(".mtkruto");
+    this.#localStorage = localStorage ?? new LocalStorage(".mtkruto", Infinity);
   }
 
   get prefix() {

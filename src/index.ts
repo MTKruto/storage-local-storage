@@ -9,7 +9,7 @@ export class StorageLocalStorage extends Storage implements Storage {
   constructor(prefix: string, localStorage?: LocalStorage) {
     if (prefix.length <= 0) {
       throw new Error("Empty prefix");
-    } else if (!/^[0-9a-zA-Z]+$/.test(prefix)) {
+    } else if (!/^[\d\w]+$/.test(prefix)) {
       throw new Error("Unallowed prefix");
     }
     super();
@@ -45,10 +45,7 @@ export class StorageLocalStorage extends Storage implements Storage {
   *getMany<T>(
     filter: GetManyFilter,
     params?: { limit?: number; reverse?: boolean },
-  ) {
-    let entries = Object.entries(this.#localStorage).sort(([a], [b]) =>
-      a.localeCompare(b)
-    );
+  ) { let entries = Object.entries(this.#localStorage).sort(([a], [b]) => a.localeCompare(b));
     if (params?.reverse) {
       entries.reverse();
     }

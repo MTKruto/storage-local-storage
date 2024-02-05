@@ -1,6 +1,6 @@
 {
   "name": "@mtkruto/storage-local-storage",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "",
   "main": "dist/index.js",
   "license": "MIT",
@@ -8,8 +8,8 @@
     "build": "rimraf dist/ && tsc"
   },
   "devDependencies": {
-    "@mtkruto/node": "^0.1.139",
-    "@types/node-localstorage": "^1.3.2",
+    "@mtkruto/node": "^0.1.149",
+    "@types/node-localstorage": "^1.3.3",
     "node-localstorage": "^3.0.5",
     "rimraf": "^5.0.5",
     "typescript": "^5.2.2"
